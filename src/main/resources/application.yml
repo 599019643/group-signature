@@ -1,0 +1,31 @@
+server:
+  port: 8090
+  servlet:
+    encoding:
+      enabled: true
+      charset: UTF-8
+      force: true
+spring:
+  # 打开循环依赖
+  main:
+    allow-circular-references: true
+  datasource:
+    driverClassName: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://192.168.56.101:3306/group_signature?autoCommit=false&useUnicode=true&characterEncoding=utf-8&serverTimezone=Hongkong
+    username: "root"
+    password: "Jxsflml@123456"
+mybatis-plus:
+  #扫描xml路径
+  mapper-locations: classpath*:mapper/**/*Mapper.xml
+  type-aliases-package: com.cora.block.entity
+  configuration:
+    map-underscore-to-camel-case: true
+    cache-enabled: true
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+blockchain:
+  switch: false
+  group:
+    id: 1
+  sig:
+    address: '0x5ccd09034aef0d902bf85b8fbfd0100835b1afff'

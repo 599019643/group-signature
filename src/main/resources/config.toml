@@ -1,0 +1,17 @@
+[cryptoMaterial]
+
+certPath = "conf"
+
+[network]
+peers = ["192.168.56.101:20203"]
+
+[account]
+keyStoreDir = "account"
+
+accountFileFormat = "p12"
+password = "123456"
+accountAddress = "0x4fa154dd45d9c63c43c43dbb45fffae36ac25deb"
+
+[threadPool]
+maxBlockingQueueSize = "10240"
+
